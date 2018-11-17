@@ -8,7 +8,7 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 
-object Dialog {
+object DialogHelper {
     fun showWarnDialog(context: Context, message: String, positiveMsg: String, isCancelable: Boolean, answer: Answer) {
 
         val alertDialogBuilder: AlertDialog.Builder = AlertDialog.Builder(context)
