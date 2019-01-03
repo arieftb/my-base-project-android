@@ -1,0 +1,34 @@
+image: jangrewe/gitlab-ci-android
+
+before_script:
+  - export GRADLE_USER_HOME=$(pwd)/.gradle
+  - chmod +x ./gradlew
+
+stages:
+    - debug
+    - release
+    - releasetest
+   
+compileDebug:
+  stage: debug
+  script:
+    - ./gradlew --stacktrace clean assembleDebug
+  only:
+    - development
+    
+compileRelease:
+  stage: release
+  script:
+    - ./gradlew --stacktrace clean assembleRelease
+  only:
+    - master
+  artifacts:
+    paths:
+    - app/build/outputs/apk
+    
+sendTestApp:
+  stage: releasetest
+  script:
+    - ./gradlew --stacktrace clean assembleRelease crashlyticsUploadDistributionRelease
+  only:
+    - test
