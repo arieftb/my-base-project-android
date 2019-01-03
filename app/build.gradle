@@ -9,6 +9,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 28
     defaultConfig {
+//        TODO CHANGE APP ID HERE
         applicationId "id.co.gitsolution.eholiday"
         minSdkVersion 19
         targetSdkVersion 28
