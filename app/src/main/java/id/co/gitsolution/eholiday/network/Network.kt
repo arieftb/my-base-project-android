@@ -6,6 +6,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
+import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import java.util.concurrent.TimeoutException
 
@@ -36,6 +37,8 @@ object Network {
         } else if (t is UnknownHostException) {
             code = Constants.CODE_HOST_ERROR
         } else if (t is TimeoutException) {
+            code = Constants.CODE_TIME_OUT
+        } else if (t is SocketTimeoutException) {
             code = Constants.CODE_TIME_OUT
         } else {
             code = 0

@@ -15,6 +15,7 @@ android {
         versionCode 1
         versionName "0.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //TODO CHANGE BASE URL HERE
         buildConfigField 'String', 'BASE_URL', '"https://eholiday.gitsolution.co.id/api/"'
     }
     buildTypes {
