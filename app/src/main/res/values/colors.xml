@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Developed By Arief TB on 1/14/19 7:37 AM.
+  ~ Github : github.com/arieftb .
+  ~ Web : arieftb.com .
+  ~ Copyright (c) 2019.
+  -->
+
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>

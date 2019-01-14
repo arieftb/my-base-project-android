@@ -1,5 +1,8 @@
 /*
- * Copyright arieftb (c) 2018.
+ * Developed By Arief TB on 1/14/19 7:37 AM.
+ * Github : github.com/arieftb .
+ * Web : arieftb.com .
+ * Copyright (c) 2019.
  */
 
 package id.co.gitsolution.eholiday.utils
@@ -9,7 +12,7 @@ import android.content.Context
 import android.content.DialogInterface
 
 object DialogHelper {
-    fun showWarnDialog(context: Context, message: String, positiveMsg: String, isCancelable: Boolean, answer: Answer) {
+    fun showWarnDialog(context: Context, message: String, positiveMsg: String, isCancelable: Boolean, answer: Positive) {
 
         val alertDialogBuilder: AlertDialog.Builder = AlertDialog.Builder(context)
 
@@ -38,5 +41,9 @@ object DialogHelper {
     interface Answer {
         fun positiveButton(dialog: DialogInterface, id: Int)
         fun negativeButton(dialog: DialogInterface, id: Int)
+    }
+
+    interface Positive {
+        fun positiveButton(dialog: DialogInterface, id: Int)
     }
 }
